@@ -65,14 +65,23 @@ def print_inquire():
     result_inquire = ""
     return result_inquire
 
-result_inquire = input("Are you satified with trip? Y/N")
+result_inquire = input("Are you satified with your trip? Y/N: ")
+print(result_inquire)
 
-Y = False 
-N = True
 
-while N:
-    print(input("What do you want to change?"))
-    if 
+while  True:
+    if result_inquire == "Y":
+        print("Here is your trip")
+        print(result_place)
+        print(result_rest)
+        print(result_trans)
+        print(result_ent)
+        print("Enjoy!")
+    elif result_inquire == "N":
+        print(input("What do you want to change?"))
+    break
+
+    
 
 
 
