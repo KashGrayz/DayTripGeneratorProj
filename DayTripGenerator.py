@@ -15,23 +15,66 @@
 # Remember, each function should do just one thing! 
 
 import random
-
+from urllib import response
+#Lists
 destinations = ["Los Angeles", "Portland", "Albuquerque", "Dallas", "New Orleans"]
 restaurants = ["BBQ", "Japanese", "Thai", "Mexican", "Italian"]
 mode_transpo = ["Flight", "Train", "Chauffeur", "Party Bus", "Uber Black"]
 entertainmaent = ["Wine Tour", "Concert", "Downtown Trip", "Bar crawl", "Excursion"]
 
-
-place = random.choice(destinations)
+#Random options
+place = random.choice(destinations) 
 food = random.choice(restaurants)
 vehicle = random.choice(mode_transpo)
 fun = random.choice(entertainmaent)
 
-def new_place(place_intro, trip_dest):
-    place_intro = "You're going to "
-    trip_dest = place
-    print(place_intro + trip_dest + "!")
-    return new_place(place_intro , trip_dest)
+#Random Destination
+def new_place(place_intro, place_dest): #
+    result_place = place_intro + place_dest
+    return result_place
+
+result_place = new_place("Destination is: ",place)
+print(result_place)
+
+#Random Restaurant
+def new_rest(rest_intro, rest_dine):
+    result_rest = rest_intro + rest_dine
+    return result_rest
+
+result_rest = new_rest("Restaurant style is: ",food)
+print(result_rest)
+
+#Random Transportation
+def new_trans(trans_intro, trans_sel):
+    result_trans = trans_intro + trans_sel
+    return result_trans
+
+result_trans = new_trans("Transportation is: ", vehicle)
+print(result_trans)
+
+#Random Entertainment
+def new_ent(ent_intro, ent_sel):
+    result_ent = ent_intro + ent_sel
+    return result_ent
+
+result_ent = new_ent("Entertainment is: ", fun)
+print (result_ent)
+
+#Inquire Satisfaction
+def print_inquire():
+    result_inquire = ""
+    return result_inquire
+
+result_inquire = input("Are you satified with trip? Y/N")
+
+Y = False 
+N = True
+
+while N:
+    print(input("What do you want to change?"))
+    if 
+
+
 
 
 
