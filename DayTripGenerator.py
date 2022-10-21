@@ -15,6 +15,7 @@
 # Remember, each function should do just one thing! 
 
 import random
+from tkinter import Y
 from urllib import response
 #Lists
 destinations = ["Los Angeles", "Portland", "Albuquerque", "Dallas", "New Orleans"]
@@ -78,9 +79,17 @@ while  True:
         print(result_ent)
         print("Enjoy!")
     elif result_inquire == "N":
-        print(input("What do you want to change?"))
+        print(input("What do you want to change?: "))
+        
+        restaurants = ["BBQ", "Japanese", "Thai", "Mexican", "Italian"]
+        mode_transpo = ["Flight", "Train", "Chauffeur", "Party Bus", "Uber Black"]
+        entertainmaent = ["Wine Tour", "Concert", "Downtown Trip", "Bar crawl", "Excursion"]
+    elif result_inquire == "Destination":
+            destinations.append(result_place)
+            destinations = ["Los Angeles", "Portland", "Albuquerque", "Dallas", "New Orleans"]
+            print(result_place)
     break
-
+    
     
 
 
