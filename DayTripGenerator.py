@@ -16,9 +16,23 @@
 
 import random
 
-destinations = ['Los Angeles', 'Portland', 'Albuquerque', 'Dallas', 'New Orleans']
-restaurants = ['BBQ', 'Japanese', 'Thai', 'Mexican', 'Italian']
-mode_transpo = ['Flight', 'Train', 'Chauffeur', 'Party Bus', 'Uber Black']
-entertainmaent = ['Wine Tour', 'Concert', 'Downtown Trip', 'Bar crawl', 'Excursion']
+destinations = ["Los Angeles", "Portland", "Albuquerque", "Dallas", "New Orleans"]
+restaurants = ["BBQ", "Japanese", "Thai", "Mexican", "Italian"]
+mode_transpo = ["Flight", "Train", "Chauffeur", "Party Bus", "Uber Black"]
+entertainmaent = ["Wine Tour", "Concert", "Downtown Trip", "Bar crawl", "Excursion"]
 
-print(random.choice(destinations))
+
+place = random.choice(destinations)
+food = random.choice(restaurants)
+vehicle = random.choice(mode_transpo)
+fun = random.choice(entertainmaent)
+
+def new_place(place_intro, trip_dest):
+    place_intro = "You're going to "
+    trip_dest = place
+    print(place_intro + trip_dest + "!")
+    return new_place(place_intro , trip_dest)
+
+
+
+    
