@@ -61,24 +61,19 @@ def new_ent(ent_intro, ent_sel):
 result_ent = new_ent("4. Entertainment is: ", fun)
 print (result_ent)
 
-#Inquire Satisfaction
-# def print_inquire():
-#     result_inquire = ""
-#     return result_inquire
 
-# result_inquire = input()
-# print(result_inquire)
+# Inquire Satisfaction
+def print_inquire():
+    result_inquire = ""
+    return result_inquire
 
-def option_1(opt1_intro, opt1_place):
-    option_1_answer = opt1_intro + opt1_place
-    return option_1_answer
-option_1_answer = option_1("1. Destination is: ",random.choice(destinations))
+result_inquire = input("Are you satified with your trip? Y/N: ")
+print(result_inquire)
 
 option = True
 
 while option is True:
-    result_inquire = input("Are you satified with your trip? Y/N: ")
-    print(result_inquire)
+    
     if result_inquire == "Y":
             print("Here is your trip")
             print(result_place)
@@ -88,30 +83,48 @@ while option is True:
             break
 
     elif result_inquire == "N":
-        continue
-        
+        satisfaction = input("What would you like to change 1-4?:  ")
+        break
+print("Enjoy!")
 
-satisfaction = input("What would you like to change 1-4?:  ")
+option = False
 
-while satisfaction == "1":
+
+def option_1(opt1_intro, opt1_place):
+    option_1_answer = opt1_intro + opt1_place
+    return option_1_answer
+option_1_answer = option_1("1. Destination is: ",random.choice(destinations))
+
+if satisfaction == "1":
     print("Here is your trip")
     print(option_1_answer)
     print(result_rest)
     print(result_trans)
     print(result_ent)
     result_inquire = input("Are you satified with your trip? Y/N: ")
-    
+    print(result_inquire)
 
-    if result_inquire == "N":
-        satisfaction = input("What would you like to change 1-4?:  ")
-        print(satisfaction)
-        continue
-print ("Enjoy!")
-       
+
 def option_2(opt2_intro, opt2_place):
     option_2_answer = opt2_intro + opt2_place
     return option_2_answer
-option_2_answer = option_2(". Restaurant style is: ",random.choice(food))
+option_2_answer = option_2("2. Restaurant style is: ",random.choice(food))
+
+def option_3(opt3_intro, opt3_place):
+    option_3_answer = opt3_intro + opt3_place
+    return option_3_answer
+option_3_answer = option_3("3. Transportation is: ",random.choice(vehicle))
+
+
+
+
+    #if satisfaction == "2":
+
+
+    
+
+       
+
 
 
 
