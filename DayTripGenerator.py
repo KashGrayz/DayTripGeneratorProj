@@ -14,11 +14,9 @@
 # (5 points): Single Responsibility: As a developer, I want all of my functions to have a Single Responsibility. 
 # Remember, each function should do just one thing! 
 
-from optparse import Option
+
 import random
-from tkinter import Y
-from unittest import result
-from urllib import response
+
 #Lists
 destinations = ["Los Angeles", "Portland", "Albuquerque", "Dallas", "New Orleans"]
 restaurants = ["BBQ", "Japanese", "Thai", "Mexican", "Italian"]
@@ -32,7 +30,7 @@ vehicle = random.choice(mode_transpo)
 fun = random.choice(entertainmaent)
 
 #Random Destination
-def new_place(place_intro, place_dest): #
+def new_place(place_intro, place_dest): 
     result_place = place_intro + place_dest
     return result_place
 
@@ -64,43 +62,61 @@ result_ent = new_ent("4. Entertainment is: ", fun)
 print (result_ent)
 
 #Inquire Satisfaction
-def print_inquire():
-    result_inquire = ""
-    return result_inquire
+# def print_inquire():
+#     result_inquire = ""
+#     return result_inquire
 
-result_inquire = input("Are you satified with your trip? Y/N: ")
-print(result_inquire)
+# result_inquire = input()
+# print(result_inquire)
 
-option = ""
+def option_1(opt1_intro, opt1_place):
+    option_1_answer = opt1_intro + opt1_place
+    return option_1_answer
+option_1_answer = option_1("1. Destination is: ",random.choice(destinations))
 
-if result_inquire == "Y":
+option = True
+
+while option is True:
+    result_inquire = input("Are you satified with your trip? Y/N: ")
+    print(result_inquire)
+    if result_inquire == "Y":
             print("Here is your trip")
             print(result_place)
             print(result_rest)
             print(result_trans)
             print(result_ent)
-            print("Enjoy!")
-elif result_inquire == "N":
-    option = True
+            break
 
-while option:
-        inquire_answer = input("What would you like to change? 1-4: ")
-        # if  inquire_answer == "1":
+    elif result_inquire == "N":
+        continue
         
 
+satisfaction = input("What would you like to change 1-4?:  ")
 
- 
-
-        
-
-
-
-
-
+while satisfaction == "1":
+    print("Here is your trip")
+    print(option_1_answer)
+    print(result_rest)
+    print(result_trans)
+    print(result_ent)
+    result_inquire = input("Are you satified with your trip? Y/N: ")
     
 
+    if result_inquire == "N":
+        satisfaction = input("What would you like to change 1-4?:  ")
+        print(satisfaction)
+        continue
+print ("Enjoy!")
+       
+def option_2(opt2_intro, opt2_place):
+    option_2_answer = opt2_intro + opt2_place
+    return option_2_answer
+option_2_answer = option_2(". Restaurant style is: ",random.choice(food))
 
 
 
 
-    
+
+
+  
+
