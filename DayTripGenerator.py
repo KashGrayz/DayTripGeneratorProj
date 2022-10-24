@@ -67,8 +67,7 @@ def print_inquire():
     return result_inquire
 
 result_inquire = input("Are you satified with your trip? Y/N: ")
-print(result_inquire)
-
+print(result_inquire) 
 
 while  True:
     if result_inquire == "Y":
@@ -78,18 +77,23 @@ while  True:
         print(result_trans)
         print(result_ent)
         print("Enjoy!")
+        break
+
     elif result_inquire == "N":
-        print(input("What do you want to change?: "))
-        
-        restaurants = ["BBQ", "Japanese", "Thai", "Mexican", "Italian"]
-        mode_transpo = ["Flight", "Train", "Chauffeur", "Party Bus", "Uber Black"]
-        entertainmaent = ["Wine Tour", "Concert", "Downtown Trip", "Bar crawl", "Excursion"]
-    elif result_inquire == "Destination":
-            destinations.append(result_place)
-            destinations = ["Los Angeles", "Portland", "Albuquerque", "Dallas", "New Orleans"]
-            print(result_place)
-    break
+         print(input("What do you want to change?: "))
+
     
+
+   
+
+
+# answer = "Destination"
+
+# response + ''
+
+# while ans
+        
+
     
 
 
